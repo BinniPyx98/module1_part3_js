@@ -1,7 +1,10 @@
-let a=prompt("Какое официальное название JS?","")
- if(a==="ECMAScript"){
-     alert("Верно")
+let a=prompt("input number?","")
+ if(Number(a)>0){
+     alert(1)
+ }
+ else if (Number(a)<0){
+     alert(-1)
  }
  else{
-     alert('Не знаете? ECMAScript!')
+     alert(0)
  }
