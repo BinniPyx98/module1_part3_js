@@ -1,2 +1,1 @@
-let result
-(a+b<4)?result="Мало":result="Много"
+if(age=>14&&age<=90)
