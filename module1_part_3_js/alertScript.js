@@ -1,3 +1,4 @@
+
 let n = 10;
 next:
     for (let i = 2; i <= n; i++) {
@@ -6,3 +7,4 @@ next:
         }
         alert( i );
     }
+
