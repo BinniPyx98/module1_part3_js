@@ -1,2 +1,7 @@
-let a=prompt("What's your name?","")
-alert(a)
+let a=prompt("Какое официальное название JS?","")
+ if(a==="ECMAScript"){
+     alert("Верно")
+ }
+ else{
+     alert('Не знаете? ECMAScript!')
+ }
