@@ -1,5 +1,2 @@
-let admin
-let name
-name="Jon"
-admin=name
-alert(admin)
+let a=prompt("What's your name?","")
+alert(a)
