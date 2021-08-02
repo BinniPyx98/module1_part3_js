@@ -1,6 +1,7 @@
-let isEmpty=(obj)=>{
+let sumSalaries=(obj)=>{
+    let sum=0
     for(let key in obj){
-        return false
+        sum+=obj[key]
     }
-    return true
-}s
+    return sum
+}
