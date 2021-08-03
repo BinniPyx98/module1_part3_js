@@ -1,6 +1,21 @@
-let styles=['Джаз',"Блюз"]
-styles.push( "Рок-н-Рол")
-styles[Math.floor((styles.length-1)/2)]='Classica'
-console.log(styles.shift())
-styles.unshift('raggi')
-styles.unshift('Rap')
+function sumInput() {
+    
+    let numbers = [];
+    
+    while (true) {
+        
+        let value = prompt("Введите число", 0);
+        
+        if (value === "" || value === null || !isFinite(value)) break;
+        
+        numbers.push(+value);
+    }
+    
+    let sum = 0;
+    for (let number of numbers) {
+        sum += number;
+    }
+    return sum;
+}
+
+alert( sumInput() );
