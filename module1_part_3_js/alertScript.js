@@ -1,15 +1,6 @@
-function Calculator() {
-    
-    this.read = function () {
-        this.a = +prompt('a?', 0);
-        this.b = +prompt('b?', 0);
-    };
-    
-    this.sum = function () {
-        return this.a + this.b;
-    };
-    
-    this.mul = function () {
-        return this.a * this.b;
-    };
+function Calculator(a,b){
+    return Number(a)+Number(b)
 }
+let a=prompt('input ?',0)
+let b=prompt('input ?',0)
+Calculator(a,b)
