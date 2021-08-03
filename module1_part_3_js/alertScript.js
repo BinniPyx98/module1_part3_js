@@ -1,6 +1,9 @@
-function Calculator(a,b){
-    return Number(a)+Number(b)
+let ucFirst=(str)=>{
+    if(str.length!=0){
+    let newStr=str[0].toUpperCase()
+    for(let i=1;i<str.length;i++){
+        newStr+=str[i]
+    }
+    return newStr
+    }
 }
-let a=prompt('input ?',0)
-let b=prompt('input ?',0)
-Calculator(a,b)
