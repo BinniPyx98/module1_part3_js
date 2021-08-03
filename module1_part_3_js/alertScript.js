@@ -1,21 +1,14 @@
-function sumInput() {
+let camelize=(str)=>{
+    let array=str.split("-");
+    return  array.map(
+        (word,index)=>index==0?word:word[0].toUpperCase()+word.slice(1)
+    )
+        .join('')
     
-    let numbers = [];
     
-    while (true) {
-        
-        let value = prompt("Введите число", 0);
-        
-        if (value === "" || value === null || !isFinite(value)) break;
-        
-        numbers.push(+value);
-    }
-    
-    let sum = 0;
-    for (let number of numbers) {
-        sum += number;
-    }
-    return sum;
+    console.log(array)
 }
 
-alert( sumInput() );
+let a='background-color'
+let b=camelize(a)
+console.log(b)
