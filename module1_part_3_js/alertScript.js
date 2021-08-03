@@ -1,15 +1,15 @@
-let ladder = {
-    step: 0,
-    up() {
-        this.step++;
-        return this
-    },
-    down() {
-        this.step--;
-        return this
-    },
-    showStep: function() { // показывает текущую ступеньку
-        alert( this.step );
-        return this
-    }
-};
+function Calculator() {
+    
+    this.read = function () {
+        this.a = +prompt('a?', 0);
+        this.b = +prompt('b?', 0);
+    };
+    
+    this.sum = function () {
+        return this.a + this.b;
+    };
+    
+    this.mul = function () {
+        return this.a * this.b;
+    };
+}
