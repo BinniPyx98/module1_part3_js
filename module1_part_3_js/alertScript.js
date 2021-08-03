@@ -1,14 +1,16 @@
-let multiplyNumeric=(obj)=>{
-    for (let key in obj){
-        if (typeof obj[key] == 'number') {
-            obj[key] *= 2;
-        }
+let calculator = {
+    sum() {
+        return this.a + this.b;
+    },
+    
+    mul() {
+        return this.a * this.b;
+    },
+    read() {
+        this.a = +prompt('a?', 0);
+        this.b = +prompt('b?', 0);
     }
-}
-let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
 };
-multiplyNumeric(menu)
-console.log(menu)
+calculator.read();
+alert(calculator.sum());
+alert(calculator.mul());
