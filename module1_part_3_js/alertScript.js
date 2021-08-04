@@ -1,14 +1,14 @@
-let filterRange=(arr,a,b)=>{
-    let newArr=arr.filter((el,index)=>{
-        if (el>=a&&el<=b){
-            return el
+let filterRangeInPlace=(arr,a,b)=>{
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]<=a||arr[i]>=b){
+            arr.splice(i,1)
         }
-    })
-    return newArr
+    }
+    
 }
 
 let arr = [5, 3, 8, 1];
 
-let filtered = filterRange(arr, 1, 4);
+filterRangeInPlace(arr, 1, 4); // удалены числа вне диапазона 1..4
 
-console.log( filtered );
+console.log( arr )
