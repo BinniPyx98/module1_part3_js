@@ -1,23 +1,16 @@
-let aclean = (inputArr) => {
-    
-    let arr = [...inputArr]
-    let newSetArr = new Set
-    let testArr =null
-    let result = []
-    
-    for (let i = 0; i < arr.length; i++) {
-        testArr = arr[i].toUpperCase().split("").sort().join()
-        
-        if (!newSetArr.has(testArr)) {
-            newSetArr.add(testArr)
-            result.push(inputArr[i])
-        }
+let sumSalaries=(salaries)=>{
+    let sum=0
+    let salariesValue=Object.values(salaries)
+    for(let el of salariesValue){
+        sum+=Number(el)
     }
-    
-    console.log(newSetArr)
-    return result
+    return sum
 }
 
-let arr = ["nap", "teachers", "cheaters", "PAN", "ear", "era", "hectares"];
+let salaries = {
+    "John": 100,
+    "Pete": 300,
+    "Mary": 250
+};
 
-console.log(aclean(arr)); // "nap,teachers,ear" or "PAN,cheaters,era"
+console.log( sumSalaries(salaries) ); // 650
