@@ -1,31 +1,11 @@
-let getWeekDay = (date) => {
-    switch (date.getDay()) {
-        case 0:
-            return "ВС"
-            break;
-        case 1:
-            return "ПН"
-            break;
-        case 2:
-            return "ВТ"
-            break;
-        case 3:
-            return "СР"
-            break;
-        case 4:
-            return "Чт"
-            break;
-        case 5:
-            return "Пт"
-            break;
-            break;
-        case 6:
-            return "СБ"
-            break;
-        
-    }
+let getDateAgo=(date , num)=>{
+    let newDate=new Date(date)
+    newDate.setDate(newDate.getDate()-num)
+    return newDate
 }
 
+let date = new Date(2015, 0, 2);
 
-let date = new Date(2012, 0, 3);  // 3 января 2012 года
-console.log(getWeekDay(date));        // нужно вывести "
+alert( getDateAgo(date, 1) ); // 1, (1 Jan 2015)
+alert( getDateAgo(date, 2) ); // 31, (31 Dec 2014)
+alert( getDateAgo(date, 365) ); // 2, (2 Jan 2014)
