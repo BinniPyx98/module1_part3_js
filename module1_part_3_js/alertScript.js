@@ -1,13 +1,17 @@
-let sortByAge=(arr)=>{
-    arr.sort((a,b)=>a.age-b.age)
+let getAverageAge=(users)=>{
+    let iterator=0;
+    let sum=users.reduce((acc,val)=>{
+        iterator++
+        return acc+val.age
+    },0)
+    sum/=iterator
+    console.log(sum)
 }
 
-let vasya = {name: "aaa", age: 25};
-let petya = {name: "ddd", age: 30};
-let masha = {name: "ccc", age: 28};
+let vasya = { name: "Вася", age: 25 };
+let petya = { name: "Петя", age: 30 };
+let masha = { name: "Маша", age: 29 };
 
-let users = [vasya, petya, masha];
+let arr = [ vasya, petya, masha ];
 
-sortByAge(users)
-
-console.log(users); // Вася, Петя, Маша
+getAverageAge(arr)  // (25 + 30 + 29) / 3 = 28
