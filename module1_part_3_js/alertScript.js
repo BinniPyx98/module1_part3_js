@@ -1,16 +1,14 @@
-let camelize=(str)=>{
-
-    let array=str.split("-");
-    return  array.map(
-        (word,index)=>index==0?word:word[0].toUpperCase()+word.slice(1)
-    )
-        .join('')
-    
-    
-    console.log(array)
+let filterRange=(arr,a,b)=>{
+    let newArr=arr.filter((el,index)=>{
+        if (el>=a&&el<=b){
+            return el
+        }
+    })
+    return newArr
 }
 
-let a='background-color'
+let arr = [5, 3, 8, 1];
 
-let b=camelize(a)
-console.log(b)
+let filtered = filterRange(arr, 1, 4);
+
+console.log( filtered );
