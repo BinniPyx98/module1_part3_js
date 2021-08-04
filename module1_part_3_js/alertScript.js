@@ -1,16 +1,10 @@
-let sumSalaries=(salaries)=>{
-    let sum=0
-    let salariesValue=Object.values(salaries)
-    for(let el of salariesValue){
-        sum+=Number(el)
-    }
-    return sum
+let count=(user)=>{
+    return Object.keys(user).length
 }
 
-let salaries = {
-    "John": 100,
-    "Pete": 300,
-    "Mary": 250
+let user = {
+    name: 'John',
+    age: 30
 };
 
-console.log( sumSalaries(salaries) ); // 650
+alert( count(user) ); // 2
