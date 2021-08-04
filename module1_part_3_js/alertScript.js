@@ -1,10 +1,2 @@
-let count=(user)=>{
-    return Object.keys(user).length
-}
-
-let user = {
-    name: 'John',
-    age: 30
-};
-
-alert( count(user) ); // 2
+let date= new Date(2012,1,20,3,12)
+console.log(date)
