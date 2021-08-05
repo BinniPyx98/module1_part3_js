@@ -1,15 +1,13 @@
-let inBetween =(int1,int2)=>{
-    return   (val)=>{return (val >= int1 && val < int2) }
+let byField=(str)=>{
+    return (val1,val2)=>val1.str>val2.str?1:-1
 }
 
-let inArray=([el1,el2,el3])=>{
-    return  (val)=>{
-     
-        return el1===val||el2===val||el3===val
-        
-    }
-}
+let users = [
+    { name: "John", age: 20, surname: "Johnson" },
+    { name: "Pete", age: 18, surname: "Peterson" },
+    { name: "Ann", age: 19, surname: "Hathaway" }
+];
 
-let arr = [1, 2, 3, 4, 5, 6, 7];
-console.log( arr.filter(inArray([1, 2, 10])))
-console.log( arr.filter(inBetween(3, 6)) ); // 3,4,5
+users.sort((a, b) => a.name > b.name ? 1 : -1);
+users.sort((a, b) => a.age > b.age ? 1 : -1);
+console.log(users)
