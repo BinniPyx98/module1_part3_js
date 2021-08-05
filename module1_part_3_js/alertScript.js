@@ -1,22 +1,6 @@
-let room = {
-    number: 23
-};
+function sumTo(number) {
+    if (number === 1) return 1;
+    return number + sumTo(number - 1);
+}
 
-let meetup = {
-    title: "Совещание",
-    occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
-    place: room
-};
-
-room.occupiedBy = meetup;
-meetup.self = meetup;
-
-console.log(JSON.stringify(meetup,(key,value)=>{
-    if(key!=''&&value!=meetup)
-    {
-        return value
-    }
-    else{
-        return undefined
-    }
-}))
+alert( sumTo(100) );
