@@ -1,4 +1,5 @@
-let getLastDayOfMonth=(year ,month)=>{
-let date=new Date(year,month+1,0);
-return date.getDate()
+function getSecondsToday(){
+let date=new Date()
+    let today=(date.getFullYear(),date.getMonth(),date.getDate())
+    return (date-today)/100
 }
