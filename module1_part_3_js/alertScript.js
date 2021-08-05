@@ -1,5 +1,7 @@
-function getSecondsToTomorrow(){
-let date=new Date()
-    let today=(date.getFullYear(),date.getMonth(),date.getDate())
-    return 86400-((date-today)/100)
-}
+let user = {
+    name: "Василий Иванович",
+    age: 35
+};
+
+let DataJSON=JSON.stringify(user)
+let DataUserObject=JSON.parse(DataJSON)
