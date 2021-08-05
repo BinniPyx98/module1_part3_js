@@ -1,13 +1,16 @@
-let byField=(str)=>{
-    return (val1,val2)=>val1.str>val2.str?1:-1
+function makeCounter() {
+    
+    function counter() {
+        return counter.count++;
+    };
+    counter.set=(value)=>{counter.count=value}
+    counter.decrease=()=>{return counter.count--}
+    
+    counter.count = 0;
+    
+    return counter;
 }
 
-let users = [
-    { name: "John", age: 20, surname: "Johnson" },
-    { name: "Pete", age: 18, surname: "Peterson" },
-    { name: "Ann", age: 19, surname: "Hathaway" }
-];
+let counter = makeCounter();
 
-users.sort((a, b) => a.name > b.name ? 1 : -1);
-users.sort((a, b) => a.age > b.age ? 1 : -1);
-console.log(users)
+counter.count = 10;
