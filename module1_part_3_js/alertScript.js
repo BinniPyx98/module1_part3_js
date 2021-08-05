@@ -1,7 +1,22 @@
-let user = {
-    name: "Василий Иванович",
-    age: 35
+let room = {
+    number: 23
 };
 
-let DataJSON=JSON.stringify(user)
-let DataUserObject=JSON.parse(DataJSON)
+let meetup = {
+    title: "Совещание",
+    occupiedBy: [{name: "Иванов"}, {name: "Петров"}],
+    place: room
+};
+
+room.occupiedBy = meetup;
+meetup.self = meetup;
+
+console.log(JSON.stringify(meetup,(key,value)=>{
+    if(key!=''&&value!=meetup)
+    {
+        return value
+    }
+    else{
+        return undefined
+    }
+}))
