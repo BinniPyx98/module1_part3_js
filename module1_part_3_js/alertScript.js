@@ -1,6 +1,6 @@
-function sumTo(number) {
+function factorial(number) {
     if (number === 1) return 1;
-    return number + sumTo(number - 1);
+    return number * factorial(number - 1);
 }
 
-alert( sumTo(100) );
+alert( factorial(4) );
