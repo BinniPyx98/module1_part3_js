@@ -1,6 +1,23 @@
-function factorial(number) {
-    if (number === 1) return 1;
-    return number * factorial(number - 1);
-}
+let list = {
+    value: 1,
+    next: {
+        value: 2,
+        next: {
+            value: 3,
+            next: {
+                value: 4,
+                next: null
+            }
+        }
+    }
+};
 
-alert( factorial(4) );
+let printList=(list)=>{
+    console.log(list.value)
+    if(list.next==null){
+            return
+    }else{
+    printList(list.next)
+    }
+}
+printList(list)
