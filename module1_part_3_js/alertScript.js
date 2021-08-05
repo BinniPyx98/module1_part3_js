@@ -1,23 +1,15 @@
-let list = {
-    value: 1,
-    next: {
-        value: 2,
-        next: {
-            value: 3,
-            next: {
-                value: 4,
-                next: null
-            }
-        }
-    }
-};
+let inBetween =(int1,int2)=>{
+    return   (val)=>{return (val >= int1 && val < int2) }
+}
 
-let printList=(list)=>{
-    console.log(list.value)
-    if(list.next==null){
-            return
-    }else{
-    printList(list.next)
+let inArray=([el1,el2,el3])=>{
+    return  (val)=>{
+     
+        return el1===val||el2===val||el3===val
+        
     }
 }
-printList(list)
+
+let arr = [1, 2, 3, 4, 5, 6, 7];
+console.log( arr.filter(inArray([1, 2, 10])))
+console.log( arr.filter(inBetween(3, 6)) ); // 3,4,5
